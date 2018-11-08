@@ -105,5 +105,10 @@
       <Name>EDsemp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Items\Header_Encryption.png" />
+    <Content Include="Items\icoCrypter.ico" />
+    <Content Include="Items\icons8-archivo-binario-24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

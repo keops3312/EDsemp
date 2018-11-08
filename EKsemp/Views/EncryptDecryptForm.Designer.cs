@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EncryptDecryptForm));
             this.cmbSelect = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.lblcombo = new DevComponents.DotNetBar.LabelX();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,6 +64,7 @@
             // 
             // 
             this.lblcombo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblcombo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblcombo.Location = new System.Drawing.Point(42, 101);
             this.lblcombo.Name = "lblcombo";
             this.lblcombo.Size = new System.Drawing.Size(371, 23);
@@ -99,6 +101,7 @@
             // 
             // 
             this.lblselect.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblselect.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblselect.Location = new System.Drawing.Point(42, 156);
             this.lblselect.Name = "lblselect";
             this.lblselect.Size = new System.Drawing.Size(217, 54);
@@ -111,6 +114,7 @@
             // 
             // 
             this.lblencrypt.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblencrypt.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblencrypt.Location = new System.Drawing.Point(42, 248);
             this.lblencrypt.Name = "lblencrypt";
             this.lblencrypt.Size = new System.Drawing.Size(371, 23);
@@ -123,6 +127,7 @@
             // 
             // 
             this.lbldecrypt.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lbldecrypt.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbldecrypt.Location = new System.Drawing.Point(42, 318);
             this.lbldecrypt.Name = "lbldecrypt";
             this.lbldecrypt.Size = new System.Drawing.Size(371, 23);
@@ -145,7 +150,7 @@
             // 
             this.BtnClose.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.BtnClose.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.BtnClose.Location = new System.Drawing.Point(366, 12);
+            this.BtnClose.Location = new System.Drawing.Point(390, 12);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(47, 31);
             this.BtnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -220,7 +225,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(458, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.txtResponse);
             this.Controls.Add(this.comboBoxEx1);
             this.Controls.Add(this.txtDecrypt);
@@ -235,7 +242,10 @@
             this.Controls.Add(this.lblcombo);
             this.Controls.Add(this.cmbSelect);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EncryptDecryptForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EncryptDecryptForm";
             this.Load += new System.EventHandler(this.EncryptDecryptForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

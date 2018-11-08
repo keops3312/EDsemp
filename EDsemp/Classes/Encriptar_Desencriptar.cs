@@ -273,10 +273,10 @@ namespace EDsemp.Classes
             byte[] keyArray;
             byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(toEncrypt);
 
-            System.Configuration.AppSettingsReader settingsReader = new AppSettingsReader();
+            //System.Configuration.AppSettingsReader settingsReader = new AppSettingsReader();
             // Get the key from config file
 
-            string key = (string)settingsReader.GetValue("SecurityKey", typeof(String));
+            string key = "MonteRosySol";//(string)settingsReader.GetValue("SecurityKey", typeof(String));
             //System.Windows.Forms.MessageBox.Show(key);
             //If hashing use get hashcode regards to your key
             if (useHashing)
@@ -317,9 +317,9 @@ namespace EDsemp.Classes
 
             byte[] toEncryptArray = Convert.FromBase64String(cipherString);
 
-            System.Configuration.AppSettingsReader settingsReader = new AppSettingsReader();
+           //System.Configuration.AppSettingsReader settingsReader = new AppSettingsReader();
             //Get your key from config file to open the lock!
-            string key = (string)settingsReader.GetValue("SecurityKey", typeof(String));
+            string key = "MonteRosySol"; //(string)settingsReader.GetValue("SecurityKey", typeof(String));
 
             if (useHashing)
             {

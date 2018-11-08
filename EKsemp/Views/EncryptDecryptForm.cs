@@ -31,8 +31,8 @@ namespace EKsemp.Views
 
             cmbSelect.Items.Add("MD5");
             cmbSelect.Items.Add("StringSapher");
-            cmbSelect.Items.Add("RSA Encrytpion");
-            cmbSelect.Items.Add("Tripple");
+           // cmbSelect.Items.Add("RSA Encryption");
+           //cmbSelect.Items.Add("Tripple");
 
         }
 
@@ -65,6 +65,31 @@ namespace EKsemp.Views
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        //Convert!!
+        private void btnDo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string text = "";
+                if (swtSelect.Value == true)
+                {
+                    text = txtEncrypt.Text;
+                }
+                else
+                {
+                    text = txtDecrypt.Text;
+                }
+                txtResponse.Text = Result(cmbSelect.Text, text);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         #endregion
@@ -109,7 +134,7 @@ namespace EKsemp.Views
                     return result;
 
 
-                case "RSA Encrytpion":
+                case "RSA Encryption":
                     if (swtSelect.Value == true)//encryp
                     {
 
@@ -131,12 +156,12 @@ namespace EKsemp.Views
 
 
 
-                        result = Encriptar_Desencriptar.EncryptTripple(leyend,true);
+                        result = Encriptar_Desencriptar.EncryptTripple(leyend,false);
 
                         return result;
                     }
 
-                    result = Encriptar_Desencriptar.DecryptTripple(leyend,true);
+                    result = Encriptar_Desencriptar.DecryptTripple(leyend,false);
 
                     return result;
 
@@ -150,40 +175,9 @@ namespace EKsemp.Views
          
         }
 
-
-
         #endregion
 
-        #region MyRegion
-
-        #endregion
-
-        #region MyRegion
-
-        #endregion
-
-        private void btnDo_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string text="";
-                if (swtSelect.Value == true)
-                {
-                    text = txtEncrypt.Text;
-                }
-                else
-                {
-                    text = txtDecrypt.Text;
-                }
-               txtResponse.Text= Result(cmbSelect.Text, text);
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-        }
+     
+       
     }
 }

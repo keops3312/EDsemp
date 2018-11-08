@@ -70,6 +70,15 @@ namespace EKsemp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please Select your Languaje.
+        /// </summary>
+        public static string cmbSelectLanguaje {
+            get {
+                return ResourceManager.GetString("cmbSelectLanguaje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Convert.
         /// </summary>
         public static string convert {
@@ -79,11 +88,29 @@ namespace EKsemp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error, Cant translate text, retry Again!.
+        /// </summary>
+        public static string errorMessage {
+            get {
+                return ResourceManager.GetString("errorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please select a type of cryptography.
         /// </summary>
         public static string lblcombo {
             get {
                 return ResourceManager.GetString("lblcombo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select you Languaje.
+        /// </summary>
+        public static string lblLanguaje {
+            get {
+                return ResourceManager.GetString("lblLanguaje", resourceCulture);
             }
         }
         
@@ -147,6 +174,33 @@ namespace EKsemp.Resources {
         public static string swtConvertON {
             get {
                 return ResourceManager.GetString("swtConvertON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please insert code.
+        /// </summary>
+        public static string txtDecryptWaterMark {
+            get {
+                return ResourceManager.GetString("txtDecryptWaterMark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Insert word.
+        /// </summary>
+        public static string txtEncrytpWaterMark {
+            get {
+                return ResourceManager.GetString("txtEncrytpWaterMark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You Result.
+        /// </summary>
+        public static string txtResponseWaterMark {
+            get {
+                return ResourceManager.GetString("txtResponseWaterMark", resourceCulture);
             }
         }
         

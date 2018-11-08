@@ -106,6 +106,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="mexico_circle_flat.png" />
+    <None Include="usa_circle_flat.png" />
+    <None Include="close.png" />
+    <Content Include="Items\close.png" />
+    <Content Include="Items\resolv.png" />
+    <None Include="resolv.png" />
+    <None Include="encryption.png" />
+    <Content Include="Items\encryption.png" />
     <Content Include="Items\Header_Encryption.png" />
     <Content Include="Items\icoCrypter.ico" />
     <Content Include="Items\icons8-archivo-binario-24.png" />

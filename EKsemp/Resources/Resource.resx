@@ -131,4 +131,22 @@
   <data name="lblselect" xml:space="preserve">
     <value>Please select type of operation</value>
   </data>
+  <data name="txtResponseWaterMark" xml:space="preserve">
+    <value>You Result</value>
+  </data>
+  <data name="txtEncrytpWaterMark" xml:space="preserve">
+    <value>Please Insert word</value>
+  </data>
+  <data name="txtDecryptWaterMark" xml:space="preserve">
+    <value>Please insert code</value>
+  </data>
+  <data name="cmbSelectLanguaje" xml:space="preserve">
+    <value>Please Select your Languaje</value>
+  </data>
+  <data name="lblLanguaje" xml:space="preserve">
+    <value>Select you Languaje</value>
+  </data>
+  <data name="errorMessage" xml:space="preserve">
+    <value>Error, Cant translate text, retry Again!</value>
+  </data>
 </root>

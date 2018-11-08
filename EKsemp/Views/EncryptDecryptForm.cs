@@ -16,8 +16,8 @@ namespace EKsemp.Views
 
     public partial class EncryptDecryptForm : Form
     {
-      
 
+     
         #region Methods (metodos)
         public EncryptDecryptForm()
         {
@@ -27,18 +27,16 @@ namespace EKsemp.Views
 
         public void LoadF()
         {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-MX");
 
             cmbSelect.Items.Add("MD5");
             cmbSelect.Items.Add("StringSapher");
-           // cmbSelect.Items.Add("RSA Encryption");
-           //cmbSelect.Items.Add("Tripple");
-
+         
         }
 
         private void AplicarIdioma()
         {
-          BtnClose.Text =  Resource.BtnClose;
+          
           lblcombo.Text = Resource.lblcombo;
           lblencrypt.Text=  Resource.leyendToEncrypt;
           lbldecrypt.Text = Resource.leyendToDecrypt;
@@ -46,12 +44,53 @@ namespace EKsemp.Views
           swtSelect.OnText = Resource.swtConvertON;
           swtSelect.OffText = Resource.swtConvertOFF;
           lblselect.Text = Resource.lblselect;
-          btnDo.Text = Resource.convert;
+          txtEncrypt.WatermarkText = Resource.txtEncrytpWaterMark;
+          txtDecrypt.WatermarkText = Resource.txtEncrytpWaterMark;
+          txtResponse.WatermarkText = Resource.txtResponseWaterMark;
+          btnlanguaje.Text = Resource.lblLanguaje;
+
         }
 
         #endregion
 
         #region Events (eventos)
+        //Select type  of Convertion
+        private void swtSelect_ValueChanged(object sender, EventArgs e)
+        {
+            if (swtSelect.Value == true)
+            {
+                lblencrypt.Visible = true;
+                txtEncrypt.Visible = true;
+                txtEncrypt.Focus();
+                lbldecrypt.Visible = false;
+                txtDecrypt.Visible = false;
+                txtDecrypt.Clear();
+            }
+            else
+            {
+                lbldecrypt.Visible = true;
+                txtDecrypt.Visible = true;
+                txtDecrypt.Focus();
+                lblencrypt.Visible = false;
+                txtEncrypt.Visible = false;
+                txtEncrypt.Clear();
+
+            }
+        }
+        //Change Image
+        private void buttonItem1_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            AplicarIdioma();
+        }
+        //Change Image
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-MX");
+            AplicarIdioma();
+        }
+
+
         //Load Enviroment
         private void EncryptDecryptForm_Load(object sender, EventArgs e)
         {
@@ -73,6 +112,12 @@ namespace EKsemp.Views
             try
             {
                 string text = "";
+
+
+
+
+
+
                 if (swtSelect.Value == true)
                 {
                     text = txtEncrypt.Text;
@@ -84,10 +129,13 @@ namespace EKsemp.Views
                 txtResponse.Text = Result(cmbSelect.Text, text);
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(Resource.errorMessage + ex.Message,
+                    "EncryptDecrypt SEMP", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information);
             }
 
         }
@@ -175,9 +223,11 @@ namespace EKsemp.Views
          
         }
 
+
+
+
         #endregion
 
-     
        
     }
 }

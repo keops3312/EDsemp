@@ -97,17 +97,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="title" xml:space="preserve">
+  <data name="WindowTitle" xml:space="preserve">
     <value>Encrypt and Decrypt</value>
     
   </data>
-  <data name="message" xml:space="preserve">
+  <data name="lblcombo" xml:space="preserve">
     <value>Please select a type of cryptography</value>
   </data>
   <data name="convert" xml:space="preserve">
     <value>Convert</value>
   </data>
-  <data name="close" xml:space="preserve">
+  <data name="BtnClose" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="minimize" xml:space="preserve">
@@ -115,5 +115,20 @@
   </data>
   <data name="maximize" xml:space="preserve">
     <value>Maximize</value>
+  </data>
+  <data name="swtConvertON" xml:space="preserve">
+    <value>Encrypt</value>
+  </data>
+  <data name="swtConvertOFF" xml:space="preserve">
+    <value>Decrypt</value>
+  </data>
+  <data name="leyendToEncrypt" xml:space="preserve">
+    <value>Introduce Word to Encrypt</value>
+  </data>
+  <data name="leyendToDecrypt" xml:space="preserve">
+    <value>Introduce Word to Decrypt</value>
+  </data>
+  <data name="lblselect" xml:space="preserve">
+    <value>Please select type of operation</value>
   </data>
 </root>

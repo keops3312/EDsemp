@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="title" xml:space="preserve">
-    <value>Cifrar y descifrar!</value>
+  <data name="WindowTitle" xml:space="preserve">
+    <value>Cifrar y descifrar Palabra SEMP</value>
   </data>
-  <data name="message" xml:space="preserve">
+  <data name="lblcombo" xml:space="preserve">
     <value>Por favor, seleccione un tipo de criptografía!</value>
   </data>
   <data name="convert" xml:space="preserve">
     <value>¡Convertir!</value>
   </data>
-  <data name="close" xml:space="preserve">
+  <data name="BtnClose" xml:space="preserve">
     <value>Cerrar</value>
   </data>
   <data name="minimize" xml:space="preserve">
@@ -134,5 +134,20 @@
   </data>
   <data name="maximize" xml:space="preserve">
     <value>Aumentar</value>
+  </data>
+  <data name="swtConvertON" xml:space="preserve">
+    <value>Encriptar</value>
+  </data>
+  <data name="swtConvertOFF" xml:space="preserve">
+    <value>Desencriptar</value>
+  </data>
+  <data name="leyendToEncrypt" xml:space="preserve">
+    <value>¡Introducir la palabra encriptar!</value>
+  </data>
+  <data name="leyendToDecrypt" xml:space="preserve">
+    <value>¡Introducir palabra a descifrar!</value>
+  </data>
+  <data name="lblselect" xml:space="preserve">
+    <value>Seleccione tipo de operación.</value>
   </data>
 </root>

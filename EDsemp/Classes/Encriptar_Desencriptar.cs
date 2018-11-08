@@ -15,17 +15,14 @@ namespace EDsemp.Classes
     public class Encriptar_Desencriptar
     {
 
-        #region attributes (atributos) to MD5 mode
-        string key = "ABCDEFG54669525PQRSTUVWXYZabcdef852846opqrstuvwxyz";
-        #endregion
-
         #region Methods (Metodos)
 
 
         #region MD5
         //ENCRIPTA CONTRASEÑA
-        public string EncryptKeyMD5(string cadena)
+        public static string EncryptKeyMD5(string cadena)
         {
+            string key = "ABCDEFG54669525PQRSTUVWXYZabcdef852846opqrstuvwxyz";
             //arreglo de bytes donde guardaremos la llave
 
             byte[] keyArray;
@@ -77,8 +74,10 @@ namespace EDsemp.Classes
             return Convert.ToBase64String(ArrayResultado, 0, ArrayResultado.Length);
         }
         //DESENCRIPTA CONTRASEÑA
-        public string DecryptKeyMD5(string clave)
+        public static string DecryptKeyMD5(string clave)
         {
+            string key = "ABCDEFG54669525PQRSTUVWXYZabcdef852846opqrstuvwxyz";
+
             byte[] keyArray;
 
             //convierte el texto en una secuencia de bytes
@@ -126,7 +125,7 @@ namespace EDsemp.Classes
         // This constant determines the number of iterations for the password bytes generation function.
         private const int DerivationIterations = 1000;
 
-        public static string EncryptStringSapher(string plainText, string passPhrase)
+        public static string EncryptStringSapher(string plainText, string passPhrase="MonteRosyMonteSol")
         {
             // Salt and IV is randomly generated each time, but is preprended to encrypted cipher text
             // so that the same Salt and IV values can be used when decrypting.  
@@ -163,7 +162,7 @@ namespace EDsemp.Classes
             }
         }
 
-        public static string DecryptSapher(string cipherText, string passPhrase)
+        public static string DecryptSapher(string cipherText, string passPhrase = "MonteRosyMonteSol")
         {
             // Get the complete stream of bytes that represent:
             // [32 bytes of Salt] + [32 bytes of IV] + [n bytes of CipherText]
@@ -216,8 +215,8 @@ namespace EDsemp.Classes
 
         #region RSA Encrytpion
 
-        public string EncryptStringRSA(string inputString, int dwKeySize,
-                                string xmlString)
+        public static string EncryptStringRSA(string inputString, int dwKeySize=16,
+                                string xmlString = "MonteRosyMonteSol")
         {
             RSACryptoServiceProvider rsaCryptoServiceProvider =
                                       new RSACryptoServiceProvider(dwKeySize);
@@ -242,7 +241,7 @@ namespace EDsemp.Classes
             }
             return stringBuilder.ToString();
         }
-        public string DecryptStringRSA(string inputString, int dwKeySize, string xmlString)
+        public static string DecryptStringRSA(string inputString, int dwKeySize=16, string xmlString = "MonteRosyMonteSol")
         {
             RSACryptoServiceProvider rsaCryptoServiceProvider
                                          = new RSACryptoServiceProvider(dwKeySize);

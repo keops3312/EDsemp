@@ -70,10 +70,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\Resource.en.resx" />
     <EmbeddedResource Include="Resources\Resource.es-MX.resx" />
     <EmbeddedResource Include="Resources\Resource.pt.resx" />
     <EmbeddedResource Include="Resources\Resource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\EncryptDecryptForm.resx">
@@ -97,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Header_Encryption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EDsemp\EDsemp.csproj">
+      <Project>{8e69f67c-7cb8-4363-8b35-727428ff2ea4}</Project>
+      <Name>EDsemp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

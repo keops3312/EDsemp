@@ -2,12 +2,15 @@
 
 namespace EKsemp.Views
 {
-   
-    #region Libraries (Librerias)
+
+    #region Libraries (Librerias)  
     using System;
+    using System.Drawing;
     using System.Globalization;
     using System.Threading;
     using System.Windows.Forms;
+    using DevComponents.DotNetBar;
+    using DevComponents.DotNetBar.Controls;
     using EDsemp.Classes;
     using EKsemp.Resources;
     #endregion
@@ -16,8 +19,13 @@ namespace EKsemp.Views
 
     public partial class EncryptDecryptForm : Form
     {
+      
+        
+        #region Properties (Propiedades)
+        private long _RunningAlertId = 0;
+        #endregion
 
-     
+
         #region Methods (metodos)
         public EncryptDecryptForm()
         {
@@ -49,6 +57,74 @@ namespace EKsemp.Views
           txtResponse.WatermarkText = Resource.txtResponseWaterMark;
           btnlanguaje.Text = Resource.lblLanguaje;
 
+        }
+
+
+
+        public void Generate()
+        {
+            try
+            {
+                string text = "";
+
+                string texto = "";
+
+
+
+
+                if (swtSelect.Value == true && !String.IsNullOrEmpty(txtEncrypt.Text))
+                {
+                    text = txtEncrypt.Text;
+                    txtResponse.Text = Result(cmbSelect.Text, text);
+
+                    //Alert Message
+                    texto = Resource.encrypText;
+
+                    _RunningAlertId++;
+                    eDesktopAlertColor color = eDesktopAlertColor.BlueGray;
+                    eAlertPosition position = eAlertPosition.BottomRight;
+
+                    DesktopAlert.Show(texto, "\uf005", eSymbolSet.Awesome,
+                                     Color.Empty, color, position, 4,
+                                     _RunningAlertId, AlertClicked);
+
+
+                    return;
+                }
+
+                if (swtSelect.Value == false && !String.IsNullOrEmpty(txtDecrypt.Text))
+                {
+                    text = txtDecrypt.Text;
+                    txtResponse.Text = Result(cmbSelect.Text, text);
+
+                    //Alert Message
+                    texto = Resource.decryptText;
+
+                    _RunningAlertId++;
+                    eDesktopAlertColor color = eDesktopAlertColor.BlueGray;
+                    eAlertPosition position = eAlertPosition.BottomRight;
+
+                    DesktopAlert.Show(texto, "\uf005", eSymbolSet.Awesome,
+                                     Color.Empty, color, position, 4,
+                                     _RunningAlertId, AlertClicked);
+
+                    return;
+                }
+
+                MessageBox.Show(Resource.errorMessageComplete,
+                     "EncryptDecrypt SEMP",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Exclamation);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(Resource.errorMessage + ex.Message,
+                    "EncryptDecrypt SEMP",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
         }
 
         #endregion
@@ -96,6 +172,7 @@ namespace EKsemp.Views
         {
             LoadF();
             AplicarIdioma();
+         
 
             this.Text = "Encryptador y Desencrytador";
         }
@@ -109,35 +186,8 @@ namespace EKsemp.Views
         //Convert!!
         private void btnDo_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string text = "";
 
-
-
-
-
-
-                if (swtSelect.Value == true)
-                {
-                    text = txtEncrypt.Text;
-                }
-                else
-                {
-                    text = txtDecrypt.Text;
-                }
-                txtResponse.Text = Result(cmbSelect.Text, text);
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(Resource.errorMessage + ex.Message,
-                    "EncryptDecrypt SEMP", 
-                    MessageBoxButtons.OK, 
-                    MessageBoxIcon.Information);
-            }
-
+            Generate();
         }
 
         #endregion
@@ -228,6 +278,21 @@ namespace EKsemp.Views
 
         #endregion
 
-       
+        #region Desktop Alert
+        void BeforeAlertDisplayed(object sender, EventArgs e)
+        {
+            DesktopAlertWindow win = (DesktopAlertWindow)sender;
+            // This is how to set custom colors when needed or do anything else
+            // win.BackColor=Color.Red;
+             //win.ForeColor=Color.Yellow;
+        }
+
+        private void AlertClicked(long alertId)
+        {
+            alertId.ToString();
+        }
+        #endregion
+
+
     }
 }

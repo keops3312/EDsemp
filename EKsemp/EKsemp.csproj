@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icoCrypter.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -109,6 +112,7 @@
     <None Include="mexico_circle_flat.png" />
     <None Include="usa_circle_flat.png" />
     <None Include="close.png" />
+    <Content Include="icoCrypter.ico" />
     <Content Include="Items\close.png" />
     <Content Include="Items\resolv.png" />
     <None Include="resolv.png" />

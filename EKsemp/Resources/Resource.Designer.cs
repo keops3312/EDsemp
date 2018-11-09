@@ -88,11 +88,38 @@ namespace EKsemp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Text derypt right!.
+        /// </summary>
+        public static string decryptText {
+            get {
+                return ResourceManager.GetString("decryptText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text encrypt right!.
+        /// </summary>
+        public static string encrypText {
+            get {
+                return ResourceManager.GetString("encrypText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error, Cant translate text, retry Again!.
         /// </summary>
         public static string errorMessage {
             get {
                 return ResourceManager.GetString("errorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Insert a text to traduction.
+        /// </summary>
+        public static string errorMessageComplete {
+            get {
+                return ResourceManager.GetString("errorMessageComplete", resourceCulture);
             }
         }
         

@@ -35,7 +35,6 @@
             this.lblselect = new DevComponents.DotNetBar.LabelX();
             this.lblencrypt = new DevComponents.DotNetBar.LabelX();
             this.lbldecrypt = new DevComponents.DotNetBar.LabelX();
-            this.actIndicator = new DevComponents.DotNetBar.Controls.CircularProgress();
             this.txtEncrypt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtDecrypt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtResponse = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -94,7 +93,7 @@
             this.swtSelect.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.swtSelect.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.swtSelect.SwitchBorderColor = System.Drawing.Color.Teal;
-            this.swtSelect.TabIndex = 4;
+            this.swtSelect.TabIndex = 2;
             this.swtSelect.ValueChanged += new System.EventHandler(this.swtSelect_ValueChanged);
             // 
             // lblselect
@@ -136,18 +135,6 @@
             this.lbldecrypt.TabIndex = 7;
             this.lbldecrypt.Text = "-";
             // 
-            // actIndicator
-            // 
-            // 
-            // 
-            // 
-            this.actIndicator.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.actIndicator.Location = new System.Drawing.Point(191, 228);
-            this.actIndicator.Name = "actIndicator";
-            this.actIndicator.Size = new System.Drawing.Size(75, 23);
-            this.actIndicator.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
-            this.actIndicator.TabIndex = 10;
-            // 
             // txtEncrypt
             // 
             this.txtEncrypt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -164,7 +151,7 @@
             this.txtEncrypt.PreventEnterBeep = true;
             this.txtEncrypt.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtEncrypt.Size = new System.Drawing.Size(371, 55);
-            this.txtEncrypt.TabIndex = 11;
+            this.txtEncrypt.TabIndex = 3;
             this.txtEncrypt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDecrypt
@@ -183,7 +170,7 @@
             this.txtDecrypt.PreventEnterBeep = true;
             this.txtDecrypt.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtDecrypt.Size = new System.Drawing.Size(371, 58);
-            this.txtDecrypt.TabIndex = 12;
+            this.txtDecrypt.TabIndex = 4;
             this.txtDecrypt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtResponse
@@ -208,7 +195,7 @@
             this.txtResponse.PreventEnterBeep = true;
             this.txtResponse.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtResponse.Size = new System.Drawing.Size(371, 63);
-            this.txtResponse.TabIndex = 14;
+            this.txtResponse.TabIndex = 6;
             this.txtResponse.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtResponse.WatermarkColor = System.Drawing.SystemColors.Control;
             // 
@@ -223,7 +210,7 @@
             this.btnlanguaje.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem1,
             this.buttonItem2});
-            this.btnlanguaje.TabIndex = 17;
+            this.btnlanguaje.TabIndex = 0;
             this.btnlanguaje.Text = "-";
             // 
             // buttonItem1
@@ -268,7 +255,7 @@
             this.BtnClose.Shape = new DevComponents.DotNetBar.EllipticalShapeDescriptor();
             this.BtnClose.Size = new System.Drawing.Size(48, 45);
             this.BtnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.BtnClose.TabIndex = 9;
+            this.BtnClose.TabIndex = 7;
             this.BtnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnDo
@@ -284,7 +271,7 @@
             this.btnDo.Size = new System.Drawing.Size(76, 71);
             this.btnDo.SplitButton = true;
             this.btnDo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDo.TabIndex = 8;
+            this.btnDo.TabIndex = 5;
             this.btnDo.Click += new System.EventHandler(this.btnDo_Click);
             // 
             // labelX1
@@ -299,7 +286,7 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(249, 45);
             this.labelX1.TabIndex = 18;
-            this.labelX1.Text = "EncrypDecrypt SEMP";
+            this.labelX1.Text = "EncryptDecrypt SEMP";
             // 
             // line1
             // 
@@ -324,7 +311,6 @@
             this.Controls.Add(this.txtResponse);
             this.Controls.Add(this.txtDecrypt);
             this.Controls.Add(this.txtEncrypt);
-            this.Controls.Add(this.actIndicator);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.btnDo);
             this.Controls.Add(this.lbldecrypt);
@@ -353,7 +339,6 @@
         private DevComponents.DotNetBar.LabelX lbldecrypt;
         private DevComponents.DotNetBar.ButtonX btnDo;
         private DevComponents.DotNetBar.ButtonX BtnClose;
-        private DevComponents.DotNetBar.Controls.CircularProgress actIndicator;
         private DevComponents.DotNetBar.Controls.TextBoxX txtEncrypt;
         private DevComponents.DotNetBar.Controls.TextBoxX txtDecrypt;
         private DevComponents.DotNetBar.Controls.TextBoxX txtResponse;

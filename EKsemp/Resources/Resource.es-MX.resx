@@ -168,4 +168,13 @@
   <data name="errorMessage" xml:space="preserve">
     <value>Error, no se puede traducir el texto, vuelva a intentarlo de nuevo!</value>
   </data>
+  <data name="errorMessageComplete" xml:space="preserve">
+    <value>Introduzca un texto para traducción!</value>
+  </data>
+  <data name="encrypText" xml:space="preserve">
+    <value>Texto cifrado con Exito !!</value>
+  </data>
+  <data name="decryptText" xml:space="preserve">
+    <value>Texto decifrado con Exito !!</value>
+  </data>
 </root>
